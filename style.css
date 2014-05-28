@@ -1,0 +1,38 @@
+#canvas {
+	outline:#00FF00 thick solid;
+}
+
+img {
+	outline:#00FF00 thick solid;
+}
+
+#container {
+	padding-left : 25px;
+	padding-top: 25px;
+	padding-right: 50px;
+}
+
+#minicontainer {
+	padding-left : 65px;
+}
+
+button {
+	width: 13em;
+	height: 2em;
+	background:#a4c5da;
+    border:1px solid #728ea3;
+   /* //border-bottom: none;*/
+    border-radius:2px 2px 0px 0px;
+    -webkit-box-shadow:0px -1px 0px #99b5c7 inset;
+    margin-left: 1px;
+    z-index: 5000;
+    margin-bottom: -1px; 
+    font-family: "Myriad Pro", sans-serif;
+}
+
+#abouttool{
+	width : 300px;
+	max-width: 300px;
+	float:right;
+	padding-right: 200px;
+}

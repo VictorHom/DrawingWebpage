@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<title>Simple Drawing App</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="terminal.css">
+</head>
+<body>
+	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+<!-- 	but IE doesn't support this yet -->
+	<!-- <canvas id="paintingCanvas" width= "500" height ="500"></html> -->
+<div id ="container">
+	<div id="abouttool">
+<p>This is a simple drawing app. Enjoy! You can use the crayon or marker tool to paint and an eraser to wipe the mistakes. You can also just wipe the board clean with the the clear button</p>
+</div>
+	<div id="minicontainer">
+
+	<div id="canvasDiv"></div>
+	<script type="text/javascript" src ="drawing.js">	
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){prepareCanvas();});
+	</script>
+	<div id="buttons">
+	<button  type="button" id="clearbutton" value="clear" >Clear</button>
+	<button type="button" id = "savebutton" onclick="convertCanvasToImage()" download="canvas.png" href="#" target="_blank" >Save</button>
+	<button  type="button" id="crayons" value="crayons" onclick="showOptions(this)">Crayon </button>
+	<button  type="button" id="markers" value = "markers" onclick="showOptions(this)">Marker </button>
+	<button  type="button" id="erasers" value="eraser" onclick="showOptions(this)">Eraser</button>
+	<button  type="button" id="status" value="status" onclick="checkSelect()">Current</button>
+	<select id ="colorselections">
+	</select>
+	<select id ="strokesizes">
+	</select>
+</div>
+<!-- end minicontainer below -->
+</div>
+
+<br /><br />
+<div id="statusdiv"></div>
+<div id="window">
+ 	<div id="toolbar">
+		<div class="top">
+			<div id="lights">
+				<div class="light red">
+					<div class="glyph">×</div>
+					<div class="shine"></div>
+					<div class="glow"></div>
+				</div>				
+				<div class="light yellow">
+					<div class="glyph">-</div>
+					<div class="shine"></div>
+					<div class="glow"></div>
+				</div>
+				<div class="light green">
+					<div class="glyph">+</div>
+					<div class="shine"></div>
+					<div class="glow"></div>
+				</div>
+			</div>
+			<div id="title">
+				<div class="folder">
+					<div class="tab"></div>
+					<div class="body"></div>
+				</div>
+				Drawing App
+			</div>
+			<div id="bubble">
+				<div class="shine"></div>
+				<div class="glow"></div>
+			</div>
+		</div>
+	</div>
+	<div id="body">
+		<p id ="dateShow"><script> //post the date
+var now = new Date();
+var dayofweek = weekday[now.getDay()];
+var month = month[now.getMonth()];
+var date = now.getDate();
+var timeHour = (now.getHours()  > 10) ? now.getHours() : "0"+now.getHours();
+
+var timeMin = (now.getUTCMinutes() < 10 ) ? "0" +now.getUTCMinutes() : now.getUTCMinutes();
+var timeSec = (now.getUTCSeconds()  < 10 ) ? "0" +now.getUTCSeconds() : now.getUTCSeconds();
+console.log(now);
+document.write("last Login: "+dayofweek+" " + month + " "+ date +" "+ timeHour + ":"+ timeMin+":" + timeSec + " on ttys006");
+</script><br />
+Victors-MacBook-Pro:flight victors$  <br />
+<script>
+	//var b = printStatus();
+</script>
+
+</p>	
+		<div class="cursor"></div>	
+	</div>	
+</div>
+<div id= "layouts">
+</div>
+	<!-- once selected, size and color options show up -->
+</div>
+</body>
+</html>
